@@ -1,4 +1,4 @@
-<?php namespace App\Events;
+<?php namespace cinema\Events;
 
 abstract class Event {
 

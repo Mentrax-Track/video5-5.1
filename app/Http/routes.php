@@ -1,5 +1,24 @@
 <?php
 
+
+Route::get('controlador','PruebaController@index');
+Route::get('name/{nombre}','PruebaController@nombre');
+/*Controladores RestFULL son una tecnica de arto a poquito */
+Route::resource('movie','MovieController');
+
+
+Route::get('prueba', function(){
+    return "hola desde routes php";
+});
+Route::get('nombre/{nombre}', function($nombre){
+    return "Mi nombre es: ".$nombre;
+});
+Route::get('edad/{edad}', function($edad){
+    return "Mi edad es: ".$edad;
+});
+Route::get('edad2/{edad?}', function($edad = 20){
+    return "Mi edad es: ".$edad;
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes
